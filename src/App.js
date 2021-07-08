@@ -8,6 +8,11 @@ function App() {
   const [loading, setLoading] = useState(true);
   const initialUrl = 'https://pokeapi.co/api/v2/pokemon'
 
+  useEffect(() => {
+    async fetchData() {
+      let res = await getAllPokemon(initialUrl);
+    }
+  }, [])
   return (
     <div >
 
